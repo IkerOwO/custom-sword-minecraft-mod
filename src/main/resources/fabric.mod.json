@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "custom-swords",
+	"version": "${version}",
+	"name": "Custom Swords",
+	"description": "Custom Swords :3",
+	"authors": [
+		"Iker"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/custom-swords/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.swords.CustomSwords"
+		],
+		"client": [
+			"com.swords.CustomSwordsClient"
+		]
+	},
+	"mixins": [
+		"custom-swords.mixins.json",
+		{
+			"config": "custom-swords.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
