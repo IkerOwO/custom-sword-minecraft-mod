@@ -41,10 +41,17 @@ public class CustomSwords implements ModInitializer {
 			return item;
 		}
 
-		// Create Fire Sword
+		// Fire Sword
 		public static final Item FIRE_SWORD = register(
 				"fire_sword",
 				settings -> new SwordItem(ToolMaterial.DIAMOND, 300, -2.4F, settings),
+				new Item.Settings()
+		);
+
+		// Astolfo Sword
+		public static final Item ASTOLFO_SWORD = register(
+				"astolfo_sword",
+				settings -> new SwordItem(ToolMaterial.DIAMOND, 400, 2.4f, settings),
 				new Item.Settings()
 		);
 
@@ -53,7 +60,7 @@ public class CustomSwords implements ModInitializer {
 
 			ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
 				itemGroup.add(FIRE_SWORD);
-
+				itemGroup.add(ASTOLFO_SWORD);
 			});
 		}
 	}
